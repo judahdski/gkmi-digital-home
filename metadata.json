@@ -1,0 +1,7 @@
+{
+  "name": "GKMI - Gereja Kristen Maranatha Indonesia",
+  "description": "A modern, warm digital ministry platform for Gereja Kristen Maranatha Indonesia (GKMI). Come as you are, grow in faith, and walk together.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
