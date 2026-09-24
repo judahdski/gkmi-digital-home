@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         className="flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] rounded-sm"
                     >
                         <img
-                            src="/public/gkmijg-main-logo-removebg-preview.png"
+                            src="/gkmijg-main-logo-removebg-preview.png"
                             alt="GKMI"
                             className="h-12 sm:h-14 w-auto object-contain"
                         />
