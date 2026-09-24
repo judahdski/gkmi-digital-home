@@ -211,6 +211,38 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
                 </div>
             </section>
 
+            {/* Directions inside the building */}
+            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="border border-[#E8E2D8] rounded-2xl p-6 sm:p-10 bg-[#FAF8F5]">
+                    <div className="flex items-start gap-4 mb-8">
+                        <div className="w-10 h-10 rounded-xl bg-[#EFE9DF] text-[#A34828] flex items-center justify-center shrink-0">
+                            <Navigation className="w-5 h-5" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-serif text-[#1C1917] font-semibold">
+                                {t.directionsTitle}
+                            </h2>
+                            <p className="text-sm text-stone-600 mt-1 leading-relaxed">
+                                {t.directionsSubtitle}
+                            </p>
+                        </div>
+                    </div>
+                    <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+                        {t.directionsSteps.map((step, index) => (
+                            <li
+                                key={step}
+                                className="flex items-start gap-3 text-sm text-stone-700 leading-relaxed"
+                            >
+                                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#EFE9DF] text-[#A34828] text-xs font-semibold shrink-0">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <span className="pt-1">{step}</span>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </section>
+
             {/* What to Expect (Step-by-Step Flow) */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">

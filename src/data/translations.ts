@@ -21,7 +21,7 @@ export const TRANSLATIONS = {
       serviceName: "Ibadah Raya Minggu",
       time: "10:00 - selesai",
       day: "Setiap Hari Minggu",
-      location: "Rhema Building Convention Center, lt 2, di Rhema School, Ruangan TK A",
+      location: "Rhema Building Convention Center, lantai 2, Rhema School, Kelas 2",
       getDirections: "Petunjuk Arah",
       planVisit: "Rencana Kunjungan"
     },
@@ -102,15 +102,15 @@ export const TRANSLATIONS = {
     finalCta: {
       headline: "Musim apa pun yang sedang Anda jalani, selalu ada tempat untuk Anda di sini.",
       subtext: "Kami menantikan kesempatan untuk menyapa dan beribadah bersama Anda.",
-      visitCta: "Kunjungi GKMI Minggu Ini",
+      visitCta: "Kunjungi GKMI JG Minggu Ini",
       contactCta: "Hubungi Tim Pelayanan"
     },
     footer: {
-      about: "Gereja Kristen Maranatha Indonesia (GKMI) adalah komunitas beriman yang berpusat pada Kristus, hangat, terbuka, dan berkomitmen melayani sesama.",
+      about: "GKMI Joshua Generation adalah komunitas beriman yang berpusat pada Kristus, hangat, terbuka, dan berkomitmen melayani sesama.",
       quickLinks: "Navigasi",
       contactTitle: "Kontak & Lokasi",
       followTitle: "Ikuti Kami",
-      copyright: "GKMI. Hak cipta dilindungi undang-undang.",
+      copyright: "GKMI Joshua Generation. Hak cipta dilindungi undang-undang.",
       motto: "Dibuat dengan iman, komunitas, dan ketulusan."
     },
     prayerForm: {
@@ -166,10 +166,10 @@ export const TRANSLATIONS = {
       backHome: "Kembali ke Beranda"
     },
     aboutPage: {
-      title: "Tentang GKMI",
+      title: "Tentang GKMI Joshua Generation",
       subtitle: "Mengenal komunitas, nilai, dan kerinduan hati kami untuk melayani.",
       whoWeAreTitle: "Siapa Kami",
-      whoWeAreBody: "Gereja Kristen Maranatha Indonesia (GKMI) adalah keluarga rohani yang berakar pada kasih karunia Allah. Kami adalah perhimpunan orang-orang biasa yang telah disentuh oleh kebaikan Kristus yang luar biasa.",
+      whoWeAreBody: "GKMI Joshua Generation adalah keluarga rohani yang berakar pada kasih karunia Allah. Kami adalah perhimpunan orang-orang biasa yang telah disentuh oleh kebaikan Kristus yang luar biasa.",
       ourStoryTitle: "Kisah Perjalanan Kami",
       ourStoryBody: "Dimulai dari persekutuan doa sederhana yang rindu melihat jiwa-jiwa mengenal pengharapan sejati, Tuhan terus menuntun GKMI menjadi terang dan berkat bagi lingkungan sekitar dari generasi ke generasi.",
       ourBeliefsTitle: "Apa yang Kami Yakini",
@@ -197,6 +197,18 @@ export const TRANSLATIONS = {
       locationLabel: "Alamat Gereja",
       transportTitle: "Akses & Parkir",
       transportDesc: "Tersedia area parkir kendaraan roda dua dan roda empat. Petugas keamanan kami akan dengan ramah membantu Anda memarkir kendaraan.",
+      directionsTitle: "Petunjuk Menuju Ruang Ibadah",
+      directionsSubtitle: "Ikuti langkah berikut setelah tiba di Rhema Building Convention Center.",
+      directionsSteps: [
+        "Masuk melalui Lobby Utama.",
+        "Naik ke Lantai 3 menggunakan Lift atau Tangga.",
+        "Setelah keluar dari lift, belok kiri.",
+        "Ikuti lorong hingga ujung.",
+        "Di ujung lorong, belok kanan menuju tangga.",
+        "Turun 1 lantai.",
+        "Setelah turun, masuk melalui pintu di depan.",
+        "Cari ruangan kedua dari sisi paling kanan. Itulah Ruang Ibadah."
+      ],
       whatToExpectTitle: "Langkah-Langkah Saat Anda Datang",
       steps: [
         { step: "01", title: "Kedatangan & Parkir", desc: "Tiba 10–15 menit sebelum waktu ibadah untuk mendapatkan tempat parkir yang leluasa." },
@@ -228,7 +240,7 @@ export const TRANSLATIONS = {
       serviceName: "Sunday Worship",
       time: "10:00 - finish",
       day: "Every Sunday",
-      location: "Rhema Building Convention Center, 2nd floor, at Rhema School, TK A room",
+      location: "Rhema Building Convention Center, 2nd floor, Rhema School, Room 2",
       getDirections: "Get Directions",
       planVisit: "Plan Your Visit"
     },
@@ -313,7 +325,7 @@ export const TRANSLATIONS = {
       contactCta: "Contact Pastoral Team"
     },
     footer: {
-      about: "Gereja Kristen Maranatha Indonesia (GKMI) is a Christ-centered Christian community offering a warm, gracious home to all.",
+      about: "GKMI Joshua Generation is a Christ-centered Christian community offering a warm, gracious home to all.",
       quickLinks: "Navigation",
       contactTitle: "Contact & Location",
       followTitle: "Follow Us",
@@ -376,7 +388,7 @@ export const TRANSLATIONS = {
       title: "About GKMI",
       subtitle: "Discover our heart, our story, and our community values.",
       whoWeAreTitle: "Who We Are",
-      whoWeAreBody: "Gereja Kristen Maranatha Indonesia (GKMI) is a Christian family rooted in God's grace. We are ordinary people who have encountered the extraordinary, unconditional kindness of Christ.",
+      whoWeAreBody: "GKMI Joshua Generation is a Christian family rooted in God's grace. We are ordinary people who have encountered the extraordinary, unconditional kindness of Christ.",
       ourStoryTitle: "Our Story",
       ourStoryBody: "Born out of humble prayer gatherings seeking to share hope and authentic spiritual life, God has guided GKMI to be a beacon of comfort and neighborly love across generations.",
       ourBeliefsTitle: "Our Beliefs",
@@ -404,6 +416,18 @@ export const TRANSLATIONS = {
       locationLabel: "Church Location",
       transportTitle: "Parking & Accessibility",
       transportDesc: "On-site parking is available for motorcycles and cars. Our friendly parking team will assist you upon arrival.",
+      directionsTitle: "Directions to the Worship Room",
+      directionsSubtitle: "Follow these steps once you arrive at Rhema Building Convention Center.",
+      directionsSteps: [
+        "Enter through the Main Lobby.",
+        "Go up to the 3rd Floor using the Lift or Stairs.",
+        "After exiting the lift, turn left.",
+        "Follow the corridor to the end.",
+        "At the end of the corridor, turn right toward the stairs.",
+        "Go down 1 floor.",
+        "After going down, enter through the door in front of you.",
+        "Find the second room from the far right. That is the Worship Room."
+      ],
       whatToExpectTitle: "What to Expect Step-by-Step",
       steps: [
         { step: "01", title: "Arrival & Parking", desc: "Arrive 10–15 minutes early to park comfortably and catch your breath." },

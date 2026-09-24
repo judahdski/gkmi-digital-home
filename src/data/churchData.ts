@@ -1,6 +1,6 @@
 export const CHURCH_PROFILE = {
-  name: "Gereja Kristen Maranatha Indonesia",
-  shortName: "GKMI",
+  name: "GKMI Joshua Generation",
+  shortName: "GKMI JG",
   tagline: {
     id: "Datang apa adanya. Bertumbuh dalam iman. Berjalan bersama.",
     en: "Come as you are. Grow in faith. Walk together."
@@ -11,7 +11,7 @@ export const CHURCH_PROFILE = {
   },
   mapsUrl: "https://maps.app.goo.gl/UfqR7gShH91qzrfr7",
   placeholders: {
-    address: "Rhema Building Convention Center, lt 2, di Rhema School, Ruangan TK A",
+    address: "Rhema Building Convention Center, lantai 2, Rhema School, Kelas 2",
     serviceTime: "10:00 - selesai",
     serviceDay: "Setiap Minggu",
     phone: "+62 858-8087-2623",

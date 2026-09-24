@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <button
                         onClick={() => handleLinkClick("home")}
                         aria-label="GKMI home"
-                        className="flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] rounded-sm"
+                        className="flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] rounded-sm cursor-pointer"
                     >
                         <img
                             src="/gkmijg-main-logo-removebg-preview.png"
@@ -78,6 +78,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Zone 3: Primary action + Language toggle */}
                     <div className="hidden sm:flex items-center gap-4">
+                        {/* Primary Action Button */}
+                        <button
+                            onClick={() => handleLinkClick("visit")}
+                            className="px-5 py-2.5 text-xs sm:text-sm font-medium text-white bg-[#1C1917] hover:bg-stone-800 rounded-lg transition-colors whitespace-nowrap shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1C1917]"
+                        >
+                            {t.visitUs}
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Button & Small Lang toggle */}
+                    <div className="flex items-center gap-2 lg:hidden">
                         {/* Functional Language Toggle */}
                         <div className="flex items-center border border-[#E8E2D8] bg-[#FAF8F5] rounded-md p-0.5 text-xs font-medium">
                             <button
@@ -104,27 +115,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                             </button>
                         </div>
 
-                        {/* Primary Action Button */}
-                        <button
-                            onClick={() => handleLinkClick("visit")}
-                            className="px-5 py-2.5 text-xs sm:text-sm font-medium text-white bg-[#1C1917] hover:bg-stone-800 rounded-lg transition-colors whitespace-nowrap shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1C1917]"
-                        >
-                            {t.visitUs}
-                        </button>
-                    </div>
-
-                    {/* Mobile Menu Button & Small Lang toggle */}
-                    <div className="flex items-center gap-2 lg:hidden">
-                        <button
-                            onClick={() =>
-                                onLanguageChange(
-                                    language === "id" ? "en" : "id",
-                                )
-                            }
-                            className="px-2.5 py-1 text-xs border border-[#E8E2D8] rounded text-stone-700 font-medium"
-                        >
-                            {language.toUpperCase()}
-                        </button>
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle navigation menu"

@@ -40,7 +40,7 @@ export const PastorPage: React.FC<PastorPageProps> = ({ language, onNavigate }) 
             <div className="rounded-2xl overflow-hidden border border-[#E8E2D8] shadow-md aspect-4/5 bg-[#EAE2D8]">
               <img
                 src={church.images.pastor}
-                alt="Gembala Jemaat GKMI"
+                alt="Gembala Jemaat GKMI Joshua Generation"
                 className="w-full h-full object-cover object-top"
                 referrerPolicy="no-referrer"
               />
