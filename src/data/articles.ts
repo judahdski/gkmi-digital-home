@@ -34,7 +34,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "18 September 2026",
     readTime: "4 min read",
     author: `${CHURCH_PROFILE.placeholders.pastorName} / Tim Pastoral`,
-    image: "/src/assets/images/devotional_reading_1790167400759.jpg",
+    image: "/devotional_reading_1790167400759.jpg",
     tags: ["Hope", "Peace", "Comfort"]
   },
   {
@@ -69,7 +69,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "14 September 2026",
     readTime: "3 min read",
     author: "Tim Pastoral GKMI",
-    image: "/src/assets/images/community_fellowship_1790167383537.jpg",
+    image: "/community_fellowship_1790167383537.jpg",
     tags: ["Rest", "Grace", "Life"]
   },
   {
@@ -104,7 +104,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "10 September 2026",
     readTime: "5 min read",
     author: CHURCH_PROFILE.placeholders.pastorName,
-    image: "/src/assets/images/hero_worship_community_1790167355191.jpg",
+    image: "/hero_worship_community_1790167355191.jpg",
     tags: ["Peace", "Prayer", "Trust"]
   },
   // Dedicated "Exploring Faith" articles specifically requested
@@ -137,7 +137,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "A Guide for Seekers",
     readTime: "5 min read",
     author: "GKMI Exploring Faith Desk",
-    image: "/src/assets/images/pastor_portrait_1790167370574.jpg",
+    image: "/pastor_portrait_1790167370574.jpg",
     tags: ["Faith Basics", "Jesus", "Exploration"]
   },
   {
@@ -164,7 +164,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "Welcome Guide",
     readTime: "3 min read",
     author: "GKMI Welcome Team",
-    image: "/src/assets/images/community_fellowship_1790167383537.jpg",
+    image: "/community_fellowship_1790167383537.jpg",
     tags: ["First Visit", "Belonging", "Community"]
   },
   {
@@ -191,7 +191,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "Exploring Faith Series",
     readTime: "4 min read",
     author: CHURCH_PROFILE.placeholders.pastorName,
-    image: "/src/assets/images/devotional_reading_1790167400759.jpg",
+    image: "/devotional_reading_1790167400759.jpg",
     tags: ["Forgiveness", "Healing", "Grace"]
   },
   {
@@ -218,7 +218,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "Exploring Faith Series",
     readTime: "4 min read",
     author: "Tim Pastoral GKMI",
-    image: "/src/assets/images/hero_worship_community_1790167355191.jpg",
+    image: "/hero_worship_community_1790167355191.jpg",
     tags: ["Prayer", "Conversation", "Spiritual Life"]
   },
   {
@@ -241,7 +241,7 @@ export const ARTICLES_DATA: Article[] = [
     date: "Visitor Guide",
     readTime: "3 min read",
     author: "GKMI Welcome Team",
-    image: "/src/assets/images/community_fellowship_1790167383537.jpg",
+    image: "/community_fellowship_1790167383537.jpg",
     tags: ["First Visit", "Expectations", "FAQ"]
   }
 ];

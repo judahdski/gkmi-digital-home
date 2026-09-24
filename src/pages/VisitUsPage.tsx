@@ -40,6 +40,8 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
         window.open(church.mapsUrl, "_blank", "noopener,noreferrer");
     };
 
+    const mapPreviewUrl = `https://www.google.com/maps?q=${encodeURIComponent(church.placeholders.address)}&output=embed`;
+
     const formattedFaqs = VISITOR_FAQS.map((faq) => ({
         id: faq.id,
         question: faq.question[language],
@@ -192,36 +194,19 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
                         </button>
                     </div>
 
-                    {/* Clean styled architectural map canvas fallback */}
-                    <div className="h-64 sm:h-80 bg-[#EFE9DF] relative flex flex-col items-center justify-center p-6 text-center">
-                        {/* Subtle grid pattern background */}
-                        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#1C1917_1px,transparent_1px)] [background-size:16px_16px]" />
-                        <div className="relative z-10 max-w-md space-y-3">
-                            <div className="w-12 h-12 rounded-full bg-[#1C1917] text-white flex items-center justify-center mx-auto shadow-md">
-                                <MapPin className="w-6 h-6" />
-                            </div>
-                            <h4 className="text-lg font-serif font-semibold text-[#1C1917]">
-                                GKMI Sanctuary & Fellowship Hall
-                            </h4>
-                            <p className="text-xs text-stone-600 font-mono">
-                                {church.placeholders.address}
-                            </p>
-                            <div className="flex items-center justify-center gap-3 pt-2 text-xs text-stone-500">
-                                <span>
-                                    ✓{" "}
-                                    {language === "id"
-                                        ? "Parkir Mobil & Motor"
-                                        : "Car & Bike Parking"}
-                                </span>
-                                <span>·</span>
-                                <span>
-                                    ✓{" "}
-                                    {language === "id"
-                                        ? "Akses Kursi Roda"
-                                        : "Wheelchair Accessible"}
-                                </span>
-                            </div>
-                        </div>
+                    <div className="h-64 sm:h-80 bg-[#EFE9DF]">
+                        <iframe
+                            title={
+                                language === "id"
+                                    ? "Peta lokasi GKMI"
+                                    : "GKMI location map"
+                            }
+                            src={mapPreviewUrl}
+                            className="w-full h-full border-0"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
                     </div>
                 </div>
             </section>

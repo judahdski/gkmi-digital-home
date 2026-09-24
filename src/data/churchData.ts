@@ -22,10 +22,10 @@ export const CHURCH_PROFILE = {
     facebookUrl: "[FACEBOOK URL]"
   },
   images: {
-    hero: "/src/assets/images/hero_worship_community_1790167355191.jpg",
-    pastor: "/src/assets/images/pastor-photo.png",
-    community: "/src/assets/images/community_fellowship_1790167383537.jpg",
-    devotional: "/src/assets/images/devotional_reading_1790167400759.jpg"
+    hero: "/hero_worship_community_1790167355191.jpg",
+    pastor: "/pastor-photo.png",
+    community: "/community_fellowship_1790167383537.jpg",
+    devotional: "/devotional_reading_1790167400759.jpg"
   }
 };
 
