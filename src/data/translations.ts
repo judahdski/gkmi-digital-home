@@ -19,9 +19,9 @@ export const TRANSLATIONS = {
     thisWeek: {
       label: "PEKAN INI",
       serviceName: "Ibadah Raya Minggu",
-      time: "[SERVICE TIME]",
+      time: "10:00 - selesai",
       day: "Setiap Hari Minggu",
-      location: "[CHURCH ADDRESS]",
+      location: "Rhema Building Convention Center, lt 2, di Rhema School, Ruangan TK A",
       getDirections: "Petunjuk Arah",
       planVisit: "Rencana Kunjungan"
     },
@@ -52,7 +52,7 @@ export const TRANSLATIONS = {
     pastorSection: {
       sectionTitle: "Gembala Jemaat Kami",
       quote: "Panggilan pelayanan saya bukan sekadar berkhotbah di mimbar, melainkan mendampingi dan berjalan bersama jemaat melalui setiap musim kehidupan.",
-      name: "[PASTOR NAME]",
+      name: "Pdt. Nova Jelly Rungkat, S.Pt., M.Pd.,M.Th",
       role: "Pastor / Gembala Jemaat GKMI",
       bioIntro: "Berkomitmen melayani dengan kerendahan hati, membimbing dalam firman Tuhan, dan membuka pintu untuk mendengarkan pergumulan setiap jiwa.",
       cta: "Kenali Gembala Kami",
@@ -226,9 +226,9 @@ export const TRANSLATIONS = {
     thisWeek: {
       label: "THIS WEEK",
       serviceName: "Sunday Worship",
-      time: "[SERVICE TIME]",
+      time: "10:00 - finish",
       day: "Every Sunday",
-      location: "[CHURCH ADDRESS]",
+      location: "Rhema Building Convention Center, 2nd floor, at Rhema School, TK A room",
       getDirections: "Get Directions",
       planVisit: "Plan Your Visit"
     },
@@ -259,7 +259,7 @@ export const TRANSLATIONS = {
     pastorSection: {
       sectionTitle: "Meet Our Pastor",
       quote: "My calling is not simply to preach, but to walk with people through every season of life.",
-      name: "[PASTOR NAME]",
+      name: "Pdt. Nova Jelly Rungkat, S.Pt., M.Pd.,M.Th",
       role: "Pastor / Gembala Jemaat GKMI",
       bioIntro: "Committed to serving with humility, teaching Scripture with clarity, and holding space for anyone needing a listening ear.",
       cta: "Meet Our Pastor",

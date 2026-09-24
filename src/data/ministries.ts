@@ -1,4 +1,5 @@
 import { Ministry } from '../types';
+import { CHURCH_PROFILE } from './churchData';
 
 export const MINISTRIES_DATA: Ministry[] = [
   {
@@ -15,7 +16,7 @@ export const MINISTRIES_DATA: Ministry[] = [
       id: "Membimbing anak-anak mengenal kasih Allah melalui cerita Alkitab interaktif, lagu pujian ceria, dan kegiatan kreatif yang aman.",
       en: "Guiding children to discover God's love through interactive Bible stories, joyful songs, and safe creative activities."
     },
-    schedulePlaceholder: "Minggu, bersamaan dengan ibadah umum [SERVICE TIME]"
+    schedulePlaceholder: `Minggu, bersamaan dengan ibadah umum ${CHURCH_PROFILE.placeholders.serviceTime}`
   },
   {
     id: "youth",

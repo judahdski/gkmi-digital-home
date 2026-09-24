@@ -9,20 +9,21 @@ export const CHURCH_PROFILE = {
     id: "Komunitas Kristen tempat kita berkumpul untuk beribadah, bertumbuh dalam iman, melayani sesama, dan menjalani kehidupan bersama.",
     en: "A Christian community where we gather to worship, grow in faith, serve others, and walk through life together."
   },
+  mapsUrl: "https://maps.app.goo.gl/UfqR7gShH91qzrfr7",
   placeholders: {
-    address: "[CHURCH ADDRESS]",
-    serviceTime: "[SERVICE TIME]",
-    serviceDay: "Minggu / Sunday",
-    phone: "[PHONE NUMBER]",
-    email: "[EMAIL]",
-    pastorName: "[PASTOR NAME]",
+    address: "Rhema Building Convention Center, lt 2, di Rhema School, Ruangan TK A",
+    serviceTime: "10:00 - selesai",
+    serviceDay: "Setiap Minggu",
+    phone: "+62 858-8087-2623",
+    email: "gkmijg@example.com",
+    pastorName: "Pdt. Nova Jelly Rungkat, S.Pt., M.Pd.,M.Th",
     instagramUrl: "[INSTAGRAM URL]",
     youtubeUrl: "[YOUTUBE URL]",
     facebookUrl: "[FACEBOOK URL]"
   },
   images: {
     hero: "/src/assets/images/hero_worship_community_1790167355191.jpg",
-    pastor: "/src/assets/images/pastor_portrait_1790167370574.jpg",
+    pastor: "/src/assets/images/pastor-photo.png",
     community: "/src/assets/images/community_fellowship_1790167383537.jpg",
     devotional: "/src/assets/images/devotional_reading_1790167400759.jpg"
   }
@@ -36,8 +37,8 @@ export const VISITOR_FAQS = [
       en: "Where is the church located?"
     },
     answer: {
-      id: "Gedung ibadah kami bertempat di [CHURCH ADDRESS]. Terdapat area parkir dan akses yang ramah bagi keluarga maupun penyandang disabilitas.",
-      en: "Our worship building is located at [CHURCH ADDRESS]. Parking and accessible entrance facilities are available."
+      id: `Gedung ibadah kami bertempat di ${CHURCH_PROFILE.placeholders.address}. Terdapat area parkir dan akses yang ramah bagi keluarga maupun penyandang disabilitas.`,
+      en: `Our worship building is located at ${CHURCH_PROFILE.placeholders.address}. Parking and accessible entrance facilities are available.`
     }
   },
   {
@@ -47,8 +48,8 @@ export const VISITOR_FAQS = [
       en: "When is the weekly worship service?"
     },
     answer: {
-      id: "Ibadah umum diadakan setiap hari Minggu pukul [SERVICE TIME]. Kami menyarankan hadir 10–15 menit lebih awal untuk menikmati suasana teduh dan penyambutan ramah dari tim kami.",
-      en: "Sunday worship gathers every Sunday at [SERVICE TIME]. We invite you to arrive 10–15 minutes early for quiet reflection and a warm welcome."
+      id: `Ibadah umum diadakan ${CHURCH_PROFILE.placeholders.serviceDay.toLowerCase()} pukul ${CHURCH_PROFILE.placeholders.serviceTime}. Kami menyarankan hadir 10–15 menit lebih awal untuk menikmati suasana teduh dan penyambutan ramah dari tim kami.`,
+      en: `Sunday worship gathers every Sunday at ${CHURCH_PROFILE.placeholders.serviceTime}. We invite you to arrive 10–15 minutes early for quiet reflection and a warm welcome.`
     }
   },
   {

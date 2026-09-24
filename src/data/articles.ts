@@ -1,4 +1,5 @@
 import { Article } from '../types';
+import { CHURCH_PROFILE } from './churchData';
 
 export const ARTICLES_DATA: Article[] = [
   {
@@ -32,7 +33,7 @@ export const ARTICLES_DATA: Article[] = [
     },
     date: "18 September 2026",
     readTime: "4 min read",
-    author: "[PASTOR NAME] / Tim Pastoral",
+    author: `${CHURCH_PROFILE.placeholders.pastorName} / Tim Pastoral`,
     image: "/src/assets/images/devotional_reading_1790167400759.jpg",
     tags: ["Hope", "Peace", "Comfort"]
   },
@@ -102,7 +103,7 @@ export const ARTICLES_DATA: Article[] = [
     },
     date: "10 September 2026",
     readTime: "5 min read",
-    author: "[PASTOR NAME]",
+    author: CHURCH_PROFILE.placeholders.pastorName,
     image: "/src/assets/images/hero_worship_community_1790167355191.jpg",
     tags: ["Peace", "Prayer", "Trust"]
   },
@@ -189,7 +190,7 @@ export const ARTICLES_DATA: Article[] = [
     },
     date: "Exploring Faith Series",
     readTime: "4 min read",
-    author: "[PASTOR NAME]",
+    author: CHURCH_PROFILE.placeholders.pastorName,
     image: "/src/assets/images/devotional_reading_1790167400759.jpg",
     tags: ["Forgiveness", "Healing", "Grace"]
   },

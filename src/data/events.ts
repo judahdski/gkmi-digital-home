@@ -1,4 +1,5 @@
 import { ChurchEvent } from '../types';
+import { CHURCH_PROFILE } from './churchData';
 
 export const EVENTS_DATA: ChurchEvent[] = [
   {
@@ -8,8 +9,8 @@ export const EVENTS_DATA: ChurchEvent[] = [
       en: "Sunday Worship Service"
     },
     date: "Setiap Minggu / Every Sunday",
-    timePlaceholder: "[SERVICE TIME]",
-    locationPlaceholder: "[CHURCH ADDRESS]",
+    timePlaceholder: CHURCH_PROFILE.placeholders.serviceTime,
+    locationPlaceholder: CHURCH_PROFILE.placeholders.address,
     description: {
       id: "Ibadah umum bersama dengan pujian, doa syafaat, pembacaan firman, dan khotbah pengajaran pastoral.",
       en: "Weekly congregational worship gathering featuring worship, corporate prayer, Scripture reading, and pastoral sermon."
@@ -25,7 +26,7 @@ export const EVENTS_DATA: ChurchEvent[] = [
     },
     date: "Rabu Pekan Ini / This Wednesday",
     timePlaceholder: "19:00 - 20:30 WIB",
-    locationPlaceholder: "[CHURCH ADDRESS] - Ruang Doa",
+    locationPlaceholder: `${CHURCH_PROFILE.placeholders.address} - Ruang Doa`,
     description: {
       id: "Ruang teduh untuk merenung, memanjatkan doa syafaat bagi sesama, dan mencari pemulihan di hadapan Tuhan.",
       en: "A quiet mid-week sanctuary to pause, pray for one another, and find spiritual restoration."
@@ -40,7 +41,7 @@ export const EVENTS_DATA: ChurchEvent[] = [
     },
     date: "Jumat Pekan Ini / This Friday",
     timePlaceholder: "19:30 - 21:00 WIB",
-    locationPlaceholder: "[CHURCH ADDRESS] / Online Link",
+    locationPlaceholder: `${CHURCH_PROFILE.placeholders.address} / Online Link`,
     description: {
       id: "Diskusi interaktif yang santai mengenai penerapan firman Tuhan dalam kehidupan sehari-hari.",
       en: "An open, casual conversation applying biblical insights to work, relationships, and daily life."
@@ -55,7 +56,7 @@ export const EVENTS_DATA: ChurchEvent[] = [
     },
     date: "Sabtu Sore / Saturday Afternoon",
     timePlaceholder: "16:30 - 18:30 WIB",
-    locationPlaceholder: "[CHURCH ADDRESS] - Youth Hall",
+    locationPlaceholder: `${CHURCH_PROFILE.placeholders.address} - Youth Hall`,
     description: {
       id: "Wadah bertumbuh bagi generasi muda dalam iman, persahabatan sejati, dan proyek kepedulian sosial.",
       en: "A vibrant space for young people to grow in genuine friendship, purpose, and community service."
@@ -70,7 +71,7 @@ export const EVENTS_DATA: ChurchEvent[] = [
     },
     date: "Sabtu Terakhir Bulan Ini / Last Saturday of Month",
     timePlaceholder: "08:00 - 12:00 WIB",
-    locationPlaceholder: "Wilayah Sekitar [CHURCH ADDRESS]",
+    locationPlaceholder: `Wilayah Sekitar ${CHURCH_PROFILE.placeholders.address}`,
     description: {
       id: "Pelayanan nyata bagi masyarakat sekitar berupa pembagian sembako, pemeriksaan kesehatan gratis, dan kepedulian lingkungan.",
       en: "Practical neighborly service providing basic supplies, free health screenings, and environmental care."
