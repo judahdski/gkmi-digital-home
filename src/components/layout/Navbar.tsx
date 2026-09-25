@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Language, PageRoute } from "../../types";
 import { TRANSLATIONS } from "../../data/translations";
@@ -19,7 +19,18 @@ export const Navbar: React.FC<NavbarProps> = ({
     onOpenPlanVisit,
 }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const t = TRANSLATIONS[language].nav;
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 32);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const navLinks: { label: string; route: PageRoute }[] = [
         { label: t.home, route: "home" },
@@ -37,19 +48,25 @@ export const Navbar: React.FC<NavbarProps> = ({
     };
 
     return (
-        <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E8E2D8]">
+        <header
+            className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color,box-shadow,color] duration-250 ease-in-out ${
+                isScrolled || currentPage !== "home"
+                    ? "border-[#E8E2D8] bg-[#FAF8F5]/95 text-[#1C1917] shadow-xs backdrop-blur-md"
+                    : "border-transparent bg-transparent text-white shadow-none"
+            }`}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Zone 1: Single element wordmark */}
                     <button
                         onClick={() => handleLinkClick("home")}
                         aria-label="GKMI home"
-                        className="flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] rounded-sm cursor-pointer"
+                        className="flex cursor-pointer items-center gap-3 rounded-sm text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828]"
                     >
                         <img
                             src="/gkmijg-main-logo-removebg-preview.png"
                             alt="GKMI"
-                            className="h-12 sm:h-14 w-auto object-contain"
+                            className={`h-12 w-auto object-contain sm:h-14 ${isScrolled ? "" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]"}`}
                         />
                     </button>
 
@@ -63,13 +80,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                                     onClick={() => handleLinkClick(link.route)}
                                     className={`text-sm font-medium transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] rounded-sm whitespace-nowrap ${
                                         isActive
-                                            ? "text-[#1C1917] font-semibold"
-                                            : "text-stone-600 hover:text-[#1C1917]"
+                                            ? isScrolled
+                                                ? "font-semibold text-[#1C1917]"
+                                                : "font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]"
+                                            : isScrolled
+                                              ? "text-stone-600 hover:text-[#1C1917]"
+                                              : "text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)] hover:text-white"
                                     }`}
                                 >
                                     {link.label}
                                     {isActive && (
-                                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#A34828] rounded-full" />
+                                        <span
+                                            className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${isScrolled ? "bg-[#A34828]" : "bg-[#F5C7B0]"}`}
+                                        />
                                     )}
                                 </button>
                             );
@@ -90,14 +113,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                     {/* Mobile Menu Button & Small Lang toggle */}
                     <div className="flex items-center gap-2 lg:hidden">
                         {/* Functional Language Toggle */}
-                        <div className="flex items-center border border-[#E8E2D8] bg-[#FAF8F5] rounded-md p-0.5 text-xs font-medium">
+                        <div
+                            className={`flex items-center rounded-md border p-0.5 text-xs font-medium transition-colors duration-250 ${isScrolled ? "border-[#E8E2D8] bg-[#FAF8F5]" : "border-white/45 bg-black/10"}`}
+                        >
                             <button
                                 type="button"
                                 onClick={() => onLanguageChange("id")}
                                 className={`px-2.5 py-1 rounded transition-colors whitespace-nowrap ${
                                     language === "id"
                                         ? "bg-[#1C1917] text-white"
-                                        : "text-stone-600 hover:text-stone-900"
+                                        : isScrolled
+                                          ? "text-stone-600 hover:text-stone-900"
+                                          : "text-white/90 hover:text-white"
                                 }`}
                             >
                                 ID
@@ -108,7 +135,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                                 className={`px-2.5 py-1 rounded transition-colors whitespace-nowrap ${
                                     language === "en"
                                         ? "bg-[#1C1917] text-white"
-                                        : "text-stone-600 hover:text-stone-900"
+                                        : isScrolled
+                                          ? "text-stone-600 hover:text-stone-900"
+                                          : "text-white/90 hover:text-white"
                                 }`}
                             >
                                 EN
@@ -119,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle navigation menu"
                             aria-expanded={mobileMenuOpen}
-                            className="p-2 text-stone-700 hover:text-stone-900 rounded-md hover:bg-[#EFE9DF] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828]"
+                            className={`rounded-md p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A34828] ${isScrolled ? "text-stone-700 hover:bg-[#EFE9DF] hover:text-stone-900" : "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)] hover:bg-white/10"}`}
                         >
                             {mobileMenuOpen ? (
                                 <X className="w-6 h-6" />
