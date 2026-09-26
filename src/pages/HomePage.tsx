@@ -233,7 +233,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </section>
 
             {/* 5. MEET OUR PASTOR */}
-            <section className="max-w-xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="max-w-lg lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-[#FAF8F5] border border-[#E8E2D8] rounded-2xl overflow-hidden shadow-xs">
                     <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
                         {/* Portrait side */}

@@ -31,7 +31,7 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
     const [directionsCopied, setDirectionsCopied] = useState(false);
 
     const handleCopyAddress = () => {
-        navigator.clipboard.writeText(church.placeholders.address);
+        navigator.clipboard.writeText(church.placeholders.fullAddress);
         setDirectionsCopied(true);
         setTimeout(() => setDirectionsCopied(false), 2500);
     };
@@ -40,7 +40,7 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
         window.open(church.mapsUrl, "_blank", "noopener,noreferrer");
     };
 
-    const mapPreviewUrl = `https://www.google.com/maps?q=${encodeURIComponent(church.placeholders.address)}&output=embed`;
+    const mapPreviewUrl = `https://www.google.com/maps?q=${encodeURIComponent(church.placeholders.fullAddress)}&output=embed`;
 
     const formattedFaqs = VISITOR_FAQS.map((faq) => ({
         id: faq.id,
@@ -102,8 +102,8 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
                             <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
                                 {t.locationLabel}
                             </span>
-                            <h3 className="text-xl font-serif font-bold text-[#1C1917] mt-1 font-mono text-base">
-                                {church.placeholders.address}
+                            <h3 className="text-base font-serif font-bold text-[#1C1917] mt-1 whitespace-pre-line leading-relaxed">
+                                {church.placeholders.fullAddress}
                             </h3>
                             <p className="text-xs text-stone-500 mt-2 leading-relaxed">
                                 {language === "id"
@@ -178,7 +178,7 @@ export const VisitUsPage: React.FC<VisitUsPageProps> = ({
                                     : "Location Map & Building Layout"}
                             </h3>
                             <p className="text-xs text-stone-500 font-mono mt-0.5">
-                                {church.placeholders.address}
+                                {church.placeholders.fullAddress}
                             </p>
                         </div>
                         <button
